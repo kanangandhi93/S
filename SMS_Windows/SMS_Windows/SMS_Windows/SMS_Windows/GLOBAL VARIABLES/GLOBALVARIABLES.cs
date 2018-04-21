@@ -8,5 +8,6 @@ namespace SMS_Windows.GLOBAL_VARIABLES
 {
     public static class GLOBALVARIABLES
     {
+        public static string NAME;
     }
 }
