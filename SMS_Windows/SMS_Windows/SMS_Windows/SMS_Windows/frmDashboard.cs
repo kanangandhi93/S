@@ -16,5 +16,10 @@ namespace SMS_Windows
         {
             InitializeComponent();
         }
+
+        private void frmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
