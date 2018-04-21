@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlRight = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlCenter = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pnlCtrlRightPnl = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddSchool = new System.Windows.Forms.Button();
+            this.pnlCtrlLeftPnl = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddClass = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnlRight.SuspendLayout();
-            this.pnlLeft.SuspendLayout();
+            this.pnlCtrlRightPnl.SuspendLayout();
+            this.pnlCtrlLeftPnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -45,9 +45,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.66666F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Controls.Add(this.pnlRight, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlLeft, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlCtrlLeftPnl, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlCenter, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlCtrlRightPnl, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -55,26 +55,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1251, 650);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // pnlRight
-            // 
-            this.pnlRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlRight.Controls.Add(this.button1);
-            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRight.Location = new System.Drawing.Point(1045, 3);
-            this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(203, 644);
-            this.pnlRight.TabIndex = 0;
-            // 
-            // pnlLeft
-            // 
-            this.pnlLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLeft.Controls.Add(this.button2);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLeft.Location = new System.Drawing.Point(3, 3);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(202, 644);
-            this.pnlLeft.TabIndex = 1;
             // 
             // pnlCenter
             // 
@@ -87,23 +67,57 @@
             this.pnlCenter.Size = new System.Drawing.Size(828, 644);
             this.pnlCenter.TabIndex = 2;
             // 
-            // button1
+            // pnlCtrlRightPnl
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(191, 85);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.pnlCtrlRightPnl.ColumnCount = 1;
+            this.pnlCtrlRightPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlCtrlRightPnl.Controls.Add(this.btnAddSchool, 0, 0);
+            this.pnlCtrlRightPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCtrlRightPnl.Location = new System.Drawing.Point(1045, 3);
+            this.pnlCtrlRightPnl.Name = "pnlCtrlRightPnl";
+            this.pnlCtrlRightPnl.RowCount = 4;
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.Size = new System.Drawing.Size(203, 644);
+            this.pnlCtrlRightPnl.TabIndex = 3;
             // 
-            // button2
+            // btnAddSchool
             // 
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 85);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAddSchool.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddSchool.Location = new System.Drawing.Point(3, 3);
+            this.btnAddSchool.Name = "btnAddSchool";
+            this.btnAddSchool.Size = new System.Drawing.Size(197, 155);
+            this.btnAddSchool.TabIndex = 0;
+            this.btnAddSchool.Text = "Add School";
+            this.btnAddSchool.UseVisualStyleBackColor = true;
+            // 
+            // pnlCtrlLeftPnl
+            // 
+            this.pnlCtrlLeftPnl.ColumnCount = 1;
+            this.pnlCtrlLeftPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlCtrlLeftPnl.Controls.Add(this.btnAddClass, 0, 0);
+            this.pnlCtrlLeftPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCtrlLeftPnl.Location = new System.Drawing.Point(3, 3);
+            this.pnlCtrlLeftPnl.Name = "pnlCtrlLeftPnl";
+            this.pnlCtrlLeftPnl.RowCount = 4;
+            this.pnlCtrlLeftPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlLeftPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlLeftPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlLeftPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlLeftPnl.Size = new System.Drawing.Size(202, 644);
+            this.pnlCtrlLeftPnl.TabIndex = 4;
+            // 
+            // btnAddClass
+            // 
+            this.btnAddClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddClass.Location = new System.Drawing.Point(3, 3);
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.Size = new System.Drawing.Size(196, 155);
+            this.btnAddClass.TabIndex = 0;
+            this.btnAddClass.Text = "Add Class";
+            this.btnAddClass.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
@@ -121,8 +135,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.pnlRight.ResumeLayout(false);
-            this.pnlLeft.ResumeLayout(false);
+            this.pnlCtrlRightPnl.ResumeLayout(false);
+            this.pnlCtrlLeftPnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -130,11 +144,11 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.FlowLayoutPanel pnlRight;
-        private System.Windows.Forms.FlowLayoutPanel pnlLeft;
         private System.Windows.Forms.Panel pnlCenter;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TableLayoutPanel pnlCtrlRightPnl;
+        private System.Windows.Forms.Button btnAddSchool;
+        private System.Windows.Forms.TableLayoutPanel pnlCtrlLeftPnl;
+        private System.Windows.Forms.Button btnAddClass;
     }
 }
 
