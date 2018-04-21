@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SMS_Windows.User_Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,9 @@ namespace SMS_Windows
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-
+            Welcome welcome=new Welcome();
+            pnlCenter.Controls.Add(welcome);
+            welcome.Dock = DockStyle.Fill;
         }
     }
 }

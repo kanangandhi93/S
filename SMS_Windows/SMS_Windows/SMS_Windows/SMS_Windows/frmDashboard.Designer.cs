@@ -32,7 +32,11 @@
             this.pnlRight = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlCenter = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.pnlRight.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -54,6 +58,8 @@
             // 
             // pnlRight
             // 
+            this.pnlRight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRight.Controls.Add(this.button1);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRight.Location = new System.Drawing.Point(1045, 3);
             this.pnlRight.Name = "pnlRight";
@@ -62,6 +68,8 @@
             // 
             // pnlLeft
             // 
+            this.pnlLeft.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLeft.Controls.Add(this.button2);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlLeft.Location = new System.Drawing.Point(3, 3);
             this.pnlLeft.Name = "pnlLeft";
@@ -70,11 +78,32 @@
             // 
             // pnlCenter
             // 
-            this.pnlCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlCenter.Location = new System.Drawing.Point(211, 3);
             this.pnlCenter.Name = "pnlCenter";
             this.pnlCenter.Size = new System.Drawing.Size(828, 644);
             this.pnlCenter.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(191, 85);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(199, 85);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
@@ -92,6 +121,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnlRight.ResumeLayout(false);
+            this.pnlLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -102,6 +133,8 @@
         private System.Windows.Forms.FlowLayoutPanel pnlRight;
         private System.Windows.Forms.FlowLayoutPanel pnlLeft;
         private System.Windows.Forms.Panel pnlCenter;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
