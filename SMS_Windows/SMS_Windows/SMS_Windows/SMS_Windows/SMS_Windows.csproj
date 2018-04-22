@@ -177,6 +177,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User Controls\ctrlSchool.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ctrlSchool.Designer.cs">
+      <DependentUpon>ctrlSchool.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\Welcome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,6 +201,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User Controls\ctrlSchool.resx">
+      <DependentUpon>ctrlSchool.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>

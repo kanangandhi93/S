@@ -31,9 +31,8 @@ namespace SMS_Windows
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            Welcome welcome = new Welcome();
-            pnlCenter.Controls.Add(welcome);
-            welcome.Dock = DockStyle.Fill;
+           
+
 
             Model.DBSchoolEntities db = new Model.DBSchoolEntities();
             var CheckMenus = db.tblMenus;
@@ -55,6 +54,9 @@ namespace SMS_Windows
 
             Close.Visible = true;
             Settings.Visible = true;
+
+            Welcome welcome = new Welcome();
+            LoadControl(welcome);
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -64,7 +66,16 @@ namespace SMS_Windows
 
         private void btnAddSchool_Click(object sender, EventArgs e)
         {
+            ctrlSchool ctrlschool = new ctrlSchool();
+            LoadControl(ctrlschool);
+           
         }
 
+        private void LoadControl(UserControl userControl)
+        {
+            pnlCenter.Controls.Clear();
+            pnlCenter.Controls.Add(userControl);
+            userControl.Dock = DockStyle.Fill;
+        }
     }
 }
