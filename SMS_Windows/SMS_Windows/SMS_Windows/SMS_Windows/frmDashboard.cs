@@ -24,5 +24,10 @@ namespace SMS_Windows
             pnlCenter.Controls.Add(welcome);
             welcome.Dock = DockStyle.Fill;
         }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
