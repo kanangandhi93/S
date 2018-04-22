@@ -77,5 +77,11 @@ namespace SMS_Windows
             pnlCenter.Controls.Add(userControl);
             userControl.Dock = DockStyle.Fill;
         }
+
+        private void StandradMaster_Click(object sender, EventArgs e)
+        {
+            ctrlStd ctrlStd = new ctrlStd();
+            LoadControl(ctrlStd);
+        }
     }
 }

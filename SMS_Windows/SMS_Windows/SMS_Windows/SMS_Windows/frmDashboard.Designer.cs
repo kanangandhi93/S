@@ -140,6 +140,7 @@
             this.StandradMaster.Text = "Standrad Master";
             this.StandradMaster.UseVisualStyleBackColor = true;
             this.StandradMaster.Visible = false;
+            this.StandradMaster.Click += new System.EventHandler(this.StandradMaster_Click);
             // 
             // ClassMaster
             // 

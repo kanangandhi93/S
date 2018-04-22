@@ -63,7 +63,8 @@
     <Compile Include="frmDashboard.Designer.cs">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GLOBAL VARIABLES\GLOBALVARIABLES.cs" />
+    <Compile Include="GLOBAL\GLOBALMETHODS.cs" />
+    <Compile Include="GLOBAL\GLOBALVARIABLES.cs" />
     <Compile Include="Model\MassConv.cs">
       <DependentUpon>ModelDBSchool.tt</DependentUpon>
     </Compile>
@@ -177,6 +178,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\msgs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>msgs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\ctrlStd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\ctrlStd.Designer.cs">
+      <DependentUpon>ctrlStd.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Controls\ctrlSchool.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +213,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Resources\msgs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>msgs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\ctrlStd.resx">
+      <DependentUpon>ctrlStd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\ctrlSchool.resx">
       <DependentUpon>ctrlSchool.cs</DependentUpon>
     </EmbeddedResource>
