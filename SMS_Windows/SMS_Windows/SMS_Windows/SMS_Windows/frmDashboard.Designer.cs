@@ -30,10 +30,10 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlCtrlLeftPnl = new System.Windows.Forms.TableLayoutPanel();
+            this.SchoolMaster = new System.Windows.Forms.Button();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCtrlRightPnl = new System.Windows.Forms.TableLayoutPanel();
             this.Close = new System.Windows.Forms.Button();
-            this.btnAddSchool = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlCtrlLeftPnl.SuspendLayout();
             this.pnlCtrlRightPnl.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.pnlCtrlLeftPnl.ColumnCount = 1;
             this.pnlCtrlLeftPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlCtrlLeftPnl.Controls.Add(this.btnAddSchool, 0, 0);
+            this.pnlCtrlLeftPnl.Controls.Add(this.SchoolMaster, 0, 0);
             this.pnlCtrlLeftPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCtrlLeftPnl.Location = new System.Drawing.Point(3, 3);
             this.pnlCtrlLeftPnl.Name = "pnlCtrlLeftPnl";
@@ -71,6 +71,19 @@
             this.pnlCtrlLeftPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.pnlCtrlLeftPnl.Size = new System.Drawing.Size(202, 644);
             this.pnlCtrlLeftPnl.TabIndex = 4;
+            // 
+            // SchoolMaster
+            // 
+            this.SchoolMaster.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SchoolMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SchoolMaster.Location = new System.Drawing.Point(3, 3);
+            this.SchoolMaster.Name = "SchoolMaster";
+            this.SchoolMaster.Size = new System.Drawing.Size(196, 155);
+            this.SchoolMaster.TabIndex = 0;
+            this.SchoolMaster.Text = "Add School";
+            this.SchoolMaster.UseVisualStyleBackColor = true;
+            this.SchoolMaster.Visible = false;
+            this.SchoolMaster.Click += new System.EventHandler(this.btnAddSchool_Click);
             // 
             // pnlCenter
             // 
@@ -114,17 +127,6 @@
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // btnAddSchool
-            // 
-            this.btnAddSchool.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSchool.Location = new System.Drawing.Point(3, 3);
-            this.btnAddSchool.Name = "btnAddSchool";
-            this.btnAddSchool.Size = new System.Drawing.Size(196, 155);
-            this.btnAddSchool.TabIndex = 0;
-            this.btnAddSchool.Text = "Add School";
-            this.btnAddSchool.UseVisualStyleBackColor = true;
-            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -155,7 +157,7 @@
         private System.Windows.Forms.TableLayoutPanel pnlCtrlRightPnl;
         private System.Windows.Forms.TableLayoutPanel pnlCtrlLeftPnl;
         private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Button btnAddSchool;
+        private System.Windows.Forms.Button SchoolMaster;
     }
 }
 
