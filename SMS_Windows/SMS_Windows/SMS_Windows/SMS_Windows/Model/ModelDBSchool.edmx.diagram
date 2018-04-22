@@ -106,6 +106,7 @@
         <AssociationConnector Association="DBSchoolModel.FK_tblSubject_tblStd" ManuallyRouted="false" />
         <AssociationConnector Association="DBSchoolModel.FK_tblVehiclePrevillage_tblVehicle" ManuallyRouted="false" />
         <AssociationConnector Association="DBSchoolModel.FK_tblVehiclePrevillage_VechicleType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBSchoolModel.tblMenu" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

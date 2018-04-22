@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlCtrlLeftPnl = new System.Windows.Forms.TableLayoutPanel();
             this.pnlCenter = new System.Windows.Forms.Panel();
             this.pnlCtrlRightPnl = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlCtrlLeftPnl = new System.Windows.Forms.TableLayoutPanel();
             this.Close = new System.Windows.Forms.Button();
+            this.btnAddSchool = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
+            this.pnlCtrlLeftPnl.SuspendLayout();
             this.pnlCtrlRightPnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,38 +56,11 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1251, 650);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // pnlCenter
-            // 
-            this.pnlCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCenter.Location = new System.Drawing.Point(211, 3);
-            this.pnlCenter.Name = "pnlCenter";
-            this.pnlCenter.Size = new System.Drawing.Size(828, 644);
-            this.pnlCenter.TabIndex = 2;
-            // 
-            // pnlCtrlRightPnl
-            // 
-            this.pnlCtrlRightPnl.ColumnCount = 1;
-            this.pnlCtrlRightPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnlCtrlRightPnl.Controls.Add(this.Close, 0, 3);
-            this.pnlCtrlRightPnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCtrlRightPnl.Location = new System.Drawing.Point(1045, 3);
-            this.pnlCtrlRightPnl.Name = "pnlCtrlRightPnl";
-            this.pnlCtrlRightPnl.RowCount = 4;
-            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.pnlCtrlRightPnl.Size = new System.Drawing.Size(203, 644);
-            this.pnlCtrlRightPnl.TabIndex = 3;
-            // 
             // pnlCtrlLeftPnl
             // 
             this.pnlCtrlLeftPnl.ColumnCount = 1;
             this.pnlCtrlLeftPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlCtrlLeftPnl.Controls.Add(this.btnAddSchool, 0, 0);
             this.pnlCtrlLeftPnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCtrlLeftPnl.Location = new System.Drawing.Point(3, 3);
             this.pnlCtrlLeftPnl.Name = "pnlCtrlLeftPnl";
@@ -97,6 +72,34 @@
             this.pnlCtrlLeftPnl.Size = new System.Drawing.Size(202, 644);
             this.pnlCtrlLeftPnl.TabIndex = 4;
             // 
+            // pnlCenter
+            // 
+            this.pnlCenter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCenter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlCenter.Location = new System.Drawing.Point(211, 3);
+            this.pnlCenter.Name = "pnlCenter";
+            this.pnlCenter.Size = new System.Drawing.Size(827, 644);
+            this.pnlCenter.TabIndex = 2;
+            // 
+            // pnlCtrlRightPnl
+            // 
+            this.pnlCtrlRightPnl.ColumnCount = 1;
+            this.pnlCtrlRightPnl.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnlCtrlRightPnl.Controls.Add(this.Close, 0, 3);
+            this.pnlCtrlRightPnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCtrlRightPnl.Location = new System.Drawing.Point(1044, 3);
+            this.pnlCtrlRightPnl.Name = "pnlCtrlRightPnl";
+            this.pnlCtrlRightPnl.RowCount = 4;
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.pnlCtrlRightPnl.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.pnlCtrlRightPnl.Size = new System.Drawing.Size(204, 644);
+            this.pnlCtrlRightPnl.TabIndex = 3;
+            // 
             // Close
             // 
             this.Close.BackColor = System.Drawing.Color.Red;
@@ -105,11 +108,22 @@
             this.Close.ForeColor = System.Drawing.Color.White;
             this.Close.Location = new System.Drawing.Point(3, 486);
             this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(197, 155);
+            this.Close.Size = new System.Drawing.Size(198, 155);
             this.Close.TabIndex = 2;
             this.Close.Text = "Close";
             this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
+            // 
+            // btnAddSchool
+            // 
+            this.btnAddSchool.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddSchool.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSchool.Location = new System.Drawing.Point(3, 3);
+            this.btnAddSchool.Name = "btnAddSchool";
+            this.btnAddSchool.Size = new System.Drawing.Size(196, 155);
+            this.btnAddSchool.TabIndex = 0;
+            this.btnAddSchool.Text = "Add School";
+            this.btnAddSchool.UseVisualStyleBackColor = true;
             // 
             // frmDashboard
             // 
@@ -128,6 +142,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmDashboard_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnlCtrlLeftPnl.ResumeLayout(false);
             this.pnlCtrlRightPnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -140,6 +155,7 @@
         private System.Windows.Forms.TableLayoutPanel pnlCtrlRightPnl;
         private System.Windows.Forms.TableLayoutPanel pnlCtrlLeftPnl;
         private System.Windows.Forms.Button Close;
+        private System.Windows.Forms.Button btnAddSchool;
     }
 }
 

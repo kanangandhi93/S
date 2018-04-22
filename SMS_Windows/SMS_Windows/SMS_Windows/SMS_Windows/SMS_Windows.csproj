@@ -142,6 +142,9 @@
     <Compile Include="Model\tblMassSub.cs">
       <DependentUpon>ModelDBSchool.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tblMenu.cs">
+      <DependentUpon>ModelDBSchool.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tblRoom.cs">
       <DependentUpon>ModelDBSchool.tt</DependentUpon>
     </Compile>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DBSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DBSchoolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="MassConv">
           <Key>
             <PropertyRef Name="MassConvId" />
@@ -278,6 +278,13 @@
           <Property Name="MassSubId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MassSub" Type="nvarchar" MaxLength="50" />
           <Property Name="MassId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="tblRoom">
           <Key>
@@ -1269,6 +1276,7 @@
           <EntitySet Name="tblHostelRoom" EntityType="Self.tblHostelRoom" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMassMaster" EntityType="Self.tblMassMaster" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblMassSub" EntityType="Self.tblMassSub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tblMenu" EntityType="Self.tblMenu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblRoom" EntityType="Self.tblRoom" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSalary" EntityType="Self.tblSalary" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSchool" EntityType="Self.tblSchool" Schema="dbo" store:Type="Tables" />
@@ -1560,8 +1568,7 @@
             <End Role="VechicleType" EntitySet="VechicleType" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DBSchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -3259,7 +3266,15 @@
             <End Role="VechicleType" EntitySet="VechicleTypes" />
             <End Role="tblVehiclePrevillage" EntitySet="tblVehiclePrevillages" />
           </AssociationSet>
+          <EntitySet Name="tblMenus" EntityType="DBSchoolModel.tblMenu" />
         </EntityContainer>
+        <EntityType Name="tblMenu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3696,6 +3711,14 @@
                 <ScalarProperty Name="VechicleType1" ColumnName="VechicleType" />
                 <ScalarProperty Name="BrId" ColumnName="BrId" />
                 <ScalarProperty Name="SchoolId" ColumnName="SchoolId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMenus">
+            <EntityTypeMapping TypeName="DBSchoolModel.tblMenu">
+              <MappingFragment StoreEntitySet="tblMenu">
+                <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

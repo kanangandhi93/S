@@ -56,5 +56,6 @@ namespace SMS_Windows.Model
         public virtual DbSet<tblVehicle> tblVehicles { get; set; }
         public virtual DbSet<tblVehiclePrevillage> tblVehiclePrevillages { get; set; }
         public virtual DbSet<VechicleType> VechicleTypes { get; set; }
+        public virtual DbSet<tblMenu> tblMenus { get; set; }
     }
 }
