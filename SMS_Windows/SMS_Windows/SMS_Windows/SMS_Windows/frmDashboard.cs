@@ -19,25 +19,42 @@ namespace SMS_Windows
             InitializeComponent();
         }
 
+        List<Control> ControlList = new List<Control>();
+        private void GetAllControls(Control container)
+        {
+            foreach (Control c in container.Controls)
+            {
+                GetAllControls(c);
+                if (c is Button) ControlList.Add(c);
+            }
+        }
+
         private void frmDashboard_Load(object sender, EventArgs e)
         {
-            Welcome welcome=new Welcome();
+            Welcome welcome = new Welcome();
             pnlCenter.Controls.Add(welcome);
             welcome.Dock = DockStyle.Fill;
 
             Model.DBSchoolEntities db = new Model.DBSchoolEntities();
             var CheckMenus = db.tblMenus;
 
+            GetAllControls(this);
             if (CheckMenus != null)
             {
                 foreach (var menu in CheckMenus)
                 {
-                    if (menu.MenuName == SchoolMaster.Name)
+                    foreach (Control c in ControlList)
                     {
-                        SchoolMaster.Visible = true;
+                        if (c.Name == menu.MenuName)
+                        {
+                            c.Visible = true;
+                        }
                     }
                 }
             }
+
+            Close.Visible = true;
+            Settings.Visible = true;
         }
 
         private void Close_Click(object sender, EventArgs e)
